@@ -21,7 +21,7 @@ daysAgo = @daysAgo = (stringDate, _today=new Date()) ->
     # get number of days
     days = floor(msDiff / 86400000)
 
-    # excude me, are you from the future?
+    # excuse me, are you from the future?
     return null if days < 0
 
     # format result
