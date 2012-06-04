@@ -29,3 +29,9 @@ daysAgo = @daysAgo = (stringDate, _today=new Date()) ->
         when 0 then 'today'
         when 1 then 'yesterday'
         else "#{days} days ago"
+
+
+daysAgo.activateForClass = (className, _today=new Date()) ->
+    # use "title" attribute
+    for el in window.document.getElementsByClassName(className)
+        el.innerText = daysAgo(el.title, _today) or el.title
