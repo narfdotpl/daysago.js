@@ -12,8 +12,8 @@ Features
 - support only for dates in the "YYYY-MM-DD" format
 - no support for time zones
 - no support for future dates
-- `daysAgo(string)` for individual dates
-- `daysAgo.activateForClass(string)` for DOM elements
+- `daysAgo(stringDate)` for individual dates
+- `daysAgo.activateForClass(className)` for DOM elements
 
 
 Examples
@@ -56,7 +56,6 @@ Meta
 ----
 
 daysago.js is written by [Maciej Konieczny][].  This software is
-released into the [public domain][].
+released into public domain.
 
   [Maciej Konieczny]: http://narf.pl/
-  [public domain]: http://unlicense.org/
