@@ -32,6 +32,8 @@ daysAgo = @daysAgo = (stringDate, _today=new Date()) ->
 
 
 daysAgo.activateForClass = (className, _today=new Date()) ->
-    # use "title" attribute
+    # use "datetime" attribute
     for el in window.document.getElementsByClassName(className)
-        el.innerText = daysAgo(el.title, _today) or el.title
+        result = daysAgo(el.attributes.datetime.value, _today)
+        if result
+            el.innerText = result

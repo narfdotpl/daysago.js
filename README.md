@@ -35,10 +35,10 @@ Examples
 
 HTML
 
-    <span class="js-date" title="2012-06-02">whatever</span>
-    <span class="js-date" title="2012-06-03">whatever</span>
-    <span class="js-date" title="2012-06-04">whatever</span>
-    <span class="js-date" title="2012-06-05">whatever</span>
+    <time class="js-date" datetime="2012-06-02" title="2012-06-02">whenever</time>
+    <time class="js-date" datetime="2012-06-03" title="2012-06-03">whenever</time>
+    <time class="js-date" datetime="2012-06-04" title="2012-06-04">whenever</time>
+    <time class="js-date" datetime="2012-06-05" title="2012-06-05">whenever</time>
 
 JS
 
@@ -46,10 +46,10 @@ JS
 
 result
 
-    <span class="js-date" title="2012-06-02">2 days ago</span>
-    <span class="js-date" title="2012-06-03">yesterday</span>
-    <span class="js-date" title="2012-06-04">today</span>
-    <span class="js-date" title="2012-06-05">2012-06-05</span>
+    <time class="js-date" datetime="2012-06-02" title="2012-06-02">2 days ago</time>
+    <time class="js-date" datetime="2012-06-03" title="2012-06-03">yesterday</time>
+    <time class="js-date" datetime="2012-06-04" title="2012-06-04">today</time>
+    <time class="js-date" datetime="2012-06-05" title="2012-06-05">whenever</time>
 
 
 Meta

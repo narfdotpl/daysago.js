@@ -31,10 +31,10 @@ describe 'daysAgo.activateForClass', ->
         div = doc.createElement('div')
         div.style.display = 'none'
         div.innerHTML = """
-            <span class="js-date" title="2012-06-02">whatever</span>
-            <span class="js-date" title="2012-06-03">whatever</span>
-            <span class="js-date" title="2012-06-04">whatever</span>
-            <span class="js-date" title="2012-06-05">whatever</span>
+            <time class="js-date" datetime="2012-06-02" title="2012-06-02">whenever</time>
+            <time class="js-date" datetime="2012-06-03" title="2012-06-03">whenever</time>
+            <time class="js-date" datetime="2012-06-04" title="2012-06-04">whenever</time>
+            <time class="js-date" datetime="2012-06-05" title="2012-06-05">whenever</time>
         """
         doc.getElementsByTagName('body')[0].appendChild(div)
 
@@ -44,7 +44,7 @@ describe 'daysAgo.activateForClass', ->
 
         # check results
         els = doc.getElementsByClassName(cls)
-        results = ['2 days ago', 'yesterday', 'today', '2012-06-05']
+        results = ['2 days ago', 'yesterday', 'today', 'whenever']
         for i in [0...els.length]
             el = els[i]
             text = results[i]
