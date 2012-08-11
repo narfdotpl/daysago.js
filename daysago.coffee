@@ -1,10 +1,10 @@
 {floor} = Math
 
 
-daysAgo = @daysAgo = (stringDate, _today=new Date()) ->
-    # change stringDate into a `Date`
+daysAgo = (stringDate, _today=new Date()) ->
+    # change stringDate into a Date
     [y, m, d] = stringDate[0...10].split('-')
-    date = new Date(+y, +m - 1, d)
+    date = new Date(+y, +m - 1, +d)
 
     # use current day as a base
     today = _today
@@ -15,11 +15,9 @@ daysAgo = @daysAgo = (stringDate, _today=new Date()) ->
     today.setSeconds(0)
     today.setMilliseconds(0)
 
-    # get difference in milliseconds
-    msDiff = (today.getTime() - date.getTime())
-
-    # get number of days
-    days = floor(msDiff / 86400000)
+    # get difference in days
+    milliseconds = today.getTime() - date.getTime()
+    days = floor(milliseconds / 86400000)
 
     # excuse me, are you from the future?
     return null if days < 0
@@ -37,3 +35,6 @@ daysAgo.activateForClass = (className, _today=new Date()) ->
         result = daysAgo(el.attributes.datetime.value, _today)
         if result
             el.innerText = result
+
+# export
+window.daysAgo = daysAgo
