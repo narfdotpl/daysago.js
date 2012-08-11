@@ -1,8 +1,8 @@
 daysago.js
 ==========
 
-Primitive JavaScript "module" that makes dates relative ("YYYY-MM-DD" →
-"X days ago").
+Primitive JavaScript "module" that makes dates relative: "YYYY-MM-DD" →
+"X days ago".
 
 
 Features
@@ -13,7 +13,7 @@ Features
 - no support for time zones
 - no support for future dates
 - `daysAgo(stringDate)` for individual dates
-- `daysAgo.activateForClass(className)` for DOM elements
+- `daysAgo.activateForClass(className)` for `<time>` elements
 
 
 Examples
