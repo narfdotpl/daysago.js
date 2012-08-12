@@ -32,9 +32,10 @@ daysAgo = (stringDate, _today=new Date()) ->
 daysAgo.activateForClass = (className, _today=new Date()) ->
     # use "datetime" attribute
     for el in window.document.getElementsByClassName(className)
-        result = daysAgo(el.attributes.datetime.value, _today)
+        datetime = el.attributes.getNamedItem('datetime').value
+        result = daysAgo(datetime, _today)
         if result
-            el.innerText = result
+            el.innerHTML = result
 
 # export
 window.daysAgo = daysAgo

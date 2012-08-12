@@ -48,4 +48,4 @@ describe 'daysAgo.activateForClass', ->
         for i in [0...els.length]
             el = els[i]
             text = results[i]
-            expect(el.innerText).toEqual(text)
+            expect(el.innerHTML).toEqual(text)
